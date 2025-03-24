@@ -1,0 +1,70 @@
+.messageinput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+
+    width: 1092px;
+    height: 96px;
+
+    background: var(--primary);
+    border-radius: 20px;
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 0px;
+    gap: 8px;
+    background-color: inherit;
+    border: none;
+    height: 48px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+.input::placeholder {
+    color: #363a3d;
+}
+
+.paperclip {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 12px;
+    color: var(--neutral);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+.paperplane {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 12px;
+
+    width: 48px;
+    height: 48px;
+
+    background: #1a1d21;
+    border-radius: 12px;
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}

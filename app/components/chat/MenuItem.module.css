@@ -1,0 +1,29 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 8px;
+    width: 199px;
+    height: 52px;
+
+    background: linear-gradient(
+        117.58deg,
+        rgba(215, 237, 237, 0.16) -47.79%,
+        rgba(204, 235, 235, 0) 100%
+    );
+    border-radius: 12px;
+    color: var(--secondary-3);
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    text-wrap: nowrap;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+}
