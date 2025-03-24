@@ -1,8 +1,6 @@
 import styles from "./MenuItem.module.css";
 
 export default function MenuItem({ children, linkUrl }) {
-    console.log(linkUrl);
-
     return (
         <>
             <a href={linkUrl} className={styles.item}>

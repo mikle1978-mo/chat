@@ -1,0 +1,426 @@
+.message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 24px;
+    width: 1052px;
+    min-height: 116px;
+    border: 1px solid var(--secondary-4);
+    border-radius: 16px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+.avatar {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.online {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -4px;
+    top: -4px;
+    background-color: var(--secondary);
+    border: 4px solid var(--border);
+    border-radius: 10px;
+}
+
+.messageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 948px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
+    width: 948px;
+    height: 32px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    margin-right: auto;
+    width: 141px;
+    height: 24px;
+    text-wrap: nowrap;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+
+    color: var(--foreground);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.time {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+
+    color: var(--neutral);
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    color: var(--gray);
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    width: 247px;
+    height: 32px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.actionContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    height: 32px;
+    background: var(--secondary-4);
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    text-wrap: nowrap;
+    color: var(--gray);
+}
+
+.actionBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    height: 32px;
+    background: var(--secondary-4);
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    text-wrap: nowrap;
+    color: var(--gray);
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4px;
+    gap: 4px;
+    position: absolute;
+    width: 232px;
+    height: 212px;
+    left: 0;
+    top: 40px;
+    background: var(--primary);
+    box-shadow: 0px 25px 50px -12px rgba(6, 7, 8, 0.16),
+        0px 8px 10px -6px rgba(6, 7, 8, 0.06);
+    border-radius: 16px;
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+}
+
+.subActionBtn {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 8px;
+    width: 224px;
+    height: 48px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 12px;
+    align-self: stretch;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: var(--foreground);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.subActionBtn_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    margin: 0 auto;
+    width: 166px;
+    height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 948px;
+    height: 152px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.optionBtn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    isolation: isolate;
+    width: 180px;
+    height: 152px;
+    background: linear-gradient(
+        117.58deg,
+        rgba(215, 237, 237, 0.16) -47.79%,
+        rgba(204, 235, 235, 0) 100%
+    );
+    border-radius: 12px;
+    border: none;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.optionBtn img {
+    width: 32px;
+    height: 32px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+.optionBtn h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    color: var(--foreground);
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.option_shadow {
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    left: 12px;
+    top: 88px;
+    background: var(--secondary-5);
+    opacity: 0.08;
+    filter: blur(36px);
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 496px;
+    height: 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px 12px 12px;
+    gap: 8px;
+    height: 40px;
+    background: linear-gradient(
+        117.58deg,
+        rgba(215, 237, 237, 0.16) -47.79%,
+        rgba(204, 235, 235, 0) 100%
+    );
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    text-wrap: nowrap;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 948px;
+    height: 300px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.image_wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+.image_wrapper img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.imageBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    gap: 12px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    top: 12px;
+    background: linear-gradient(
+        117.58deg,
+        rgba(215, 237, 237, 0.16) -47.79%,
+        rgba(204, 235, 235, 0) 100%
+    );
+    box-shadow: 0px 24px 24px -16px rgba(0, 0, 0, 0.12),
+        inset 16px 24px 64px -24px rgba(255, 255, 255, 0.08),
+        inset 0px 8px 12px rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
