@@ -7,7 +7,7 @@ export default function SideBar() {
             <div className={styles.workspace}>
                 <div className={styles.user}>
                     <div className={styles.avatar}>
-                        <img src='/images/avatars/Avatar.png' alt='avatar' />
+                        <img src='/images/avatars/Avatar.webp' alt='avatar' />
                     </div>
                     <div className={styles.name}>
                         <span>Intellisys</span>
@@ -75,7 +75,7 @@ export default function SideBar() {
                     <div className={styles.user}>
                         <div className={styles.avatar}>
                             <img
-                                src='/images/avatars/Avatar2.png'
+                                src='/images/avatars/Avatar2.webp'
                                 alt='avatar'
                             />
                             <div className={styles.status}></div>

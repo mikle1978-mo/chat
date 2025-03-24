@@ -25,27 +25,27 @@ export default function TopBar() {
                     <div className={styles.users}>
                         <div className={styles.avatar}>
                             <img
-                                src='/images/avatars/avatar3.png'
+                                src='/images/avatars/avatar3.webp'
                                 alt='avatar'
                             />
                         </div>
                         <div className={styles.avatar}>
                             <img
-                                src='/images/avatars/avatar4.png'
-                                alt='avatar'
-                            />
-                            <div className={styles.status}></div>
-                        </div>
-                        <div className={styles.avatar}>
-                            <img
-                                src='/images/avatars/avatar5.png'
+                                src='/images/avatars/avatar4.webp'
                                 alt='avatar'
                             />
                             <div className={styles.status}></div>
                         </div>
                         <div className={styles.avatar}>
                             <img
-                                src='/images/avatars/avatar6.png'
+                                src='/images/avatars/avatar5.webp'
+                                alt='avatar'
+                            />
+                            <div className={styles.status}></div>
+                        </div>
+                        <div className={styles.avatar}>
+                            <img
+                                src='/images/avatars/avatar6.webp'
                                 alt='avatar'
                             />
                         </div>
