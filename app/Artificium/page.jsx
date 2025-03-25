@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import { messages } from "@/lib/chat";
-import ArtificiumMessage from "../components/artificium/ArtificiumMessage";
+import ArtificiumMessage from "../../components/artificium/ArtificiumMessage";
 
 export default function Home() {
     return (

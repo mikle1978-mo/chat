@@ -77,7 +77,6 @@
     align-items: center;
     padding: 0px;
     gap: 16px;
-
     margin-right: auto;
     width: 141px;
     height: 24px;
@@ -153,10 +152,8 @@
 
 .actionContainer {
     position: relative;
-    display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 8px 12px;
     gap: 6px;
     height: 32px;
@@ -178,9 +175,7 @@
 }
 
 .actionBtn {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     padding: 8px 12px;
     gap: 6px;
@@ -200,6 +195,12 @@
     letter-spacing: 0.15px;
     text-wrap: nowrap;
     color: var(--gray);
+}
+.actionContainer:hover,
+.actionContainer:hover .actionBtn,
+.actionBtn:hover,
+.actionBtn:hover .actionContainer {
+    background: var(--neutral);
 }
 
 .dropdown {
@@ -423,4 +424,62 @@
         inset 16px 24px 64px -24px rgba(255, 255, 255, 0.08),
         inset 0px 8px 12px rgba(255, 255, 255, 0.08);
     border-radius: 12px;
+}
+
+.systemMessage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 808px;
+    height: 48px;
+    flex: none;
+    flex-grow: 0;
+}
+.systemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    gap: 16px;
+    height: 48px;
+    background: #0d0f10;
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+
+    color: var(--neutral);
+}
+
+.systemBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 126px;
+    height: 32px;
+    border: none;
+    background: inherit;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    color: var(--neutral);
 }

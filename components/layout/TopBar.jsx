@@ -5,6 +5,8 @@ import { useState } from "react";
 import ArtificiumIcon from "@/public/images/icons/artificium.svg";
 import ChatIcon from "@/public/images/icons/chat.svg";
 import FolderIcon from "@/public/images/icons/folder.svg";
+import MyModal from "@/components/UI/Modal";
+import Share from "./Share";
 
 const tabs = [
     { id: 1, name: "Artificium", icon: ArtificiumIcon },
@@ -14,8 +16,13 @@ const tabs = [
 
 export default function TopBar() {
     const [activeTab, setActiveTab] = useState(1);
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleOpen = () => setIsOpen(!isOpen);
     return (
         <div className={styles.topbar}>
+            <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
+                <Share toggleOpen={toggleOpen} />
+            </MyModal>
             <div className={styles.heading}>
                 <div className={styles.project}>
                     <h1>Orbital Oddysey</h1>{" "}
@@ -51,7 +58,7 @@ export default function TopBar() {
                         </div>
                         <div className={styles.count}>+4</div>
                     </div>
-                    <div className={styles.actions}>
+                    <div className={styles.actions} onClick={toggleOpen}>
                         <div className={styles.share}>
                             <img src='/images/icons/share.svg' alt='icon' />
                             <span>Share</span>

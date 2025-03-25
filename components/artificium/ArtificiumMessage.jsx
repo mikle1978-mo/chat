@@ -4,6 +4,7 @@ import styles from "./ArtificiumMessage.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import HighlightedText from "@/helpers/highLightedText.jsx";
+import Loader from "../UX/Loader";
 
 export default function ArtificiumMessage({ message }) {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -26,7 +27,92 @@ export default function ArtificiumMessage({ message }) {
     if (isSystem) {
         return (
             <div className={styles.systemMessage}>
-                <span>{text}</span>
+                <div className={styles.systemContainer}>
+                    <img src={images[0]} alt='icon' />
+                    <span>{text}</span>
+                </div>
+                <button className={styles.systemBtn}>Don't show again</button>
+            </div>
+        );
+    }
+    if (text === "loader") {
+        return (
+            <div className={styles.message}>
+                <div className={styles.avatar}>
+                    <Image src={avatar} alt='avatar' width={48} height={48} />
+                    {online && <div className={styles.online}></div>}
+                </div>
+                <div className={styles.messageContent}>
+                    <div className={styles.header}>
+                        <div className={styles.nameContainer}>
+                            <span className={styles.name}>{name}</span>
+                            <span className={styles.time}>{time}</span>
+                        </div>
+                        <img src='/images/icons/copy.svg' alt='copy' />
+                    </div>
+                    <Loader />
+                    {actions.length > 0 && (
+                        <div className={styles.actions}>
+                            {actions.map((action, index) => (
+                                <div
+                                    key={index}
+                                    className={styles.actionContainer}
+                                >
+                                    <button
+                                        className={styles.actionBtn}
+                                        onClick={() => toggleDropdown(index)}
+                                    >
+                                        {action.actionName}
+                                        {action.subActions?.length > 0 && (
+                                            <img
+                                                src='/images/icons/chevron-down.svg'
+                                                alt='chevron-down'
+                                                className={
+                                                    openDropdown === index
+                                                        ? styles.rotated
+                                                        : ""
+                                                }
+                                            />
+                                        )}
+                                    </button>
+                                    {openDropdown === index &&
+                                        action.subActions?.length > 0 && (
+                                            <div className={styles.dropdown}>
+                                                {action.subActions.map(
+                                                    (subAction) => (
+                                                        <button
+                                                            key={subAction.id}
+                                                            className={
+                                                                styles.subActionBtn
+                                                            }
+                                                        >
+                                                            <div
+                                                                className={
+                                                                    styles.subActionBtn_left
+                                                                }
+                                                            >
+                                                                <img
+                                                                    src={
+                                                                        subAction.subActionIcon
+                                                                    }
+                                                                    alt={
+                                                                        subAction.subActionName
+                                                                    }
+                                                                />
+                                                                {
+                                                                    subAction.subActionName
+                                                                }
+                                                            </div>
+                                                        </button>
+                                                    )
+                                                )}
+                                            </div>
+                                        )}
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
         );
     }

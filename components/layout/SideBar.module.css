@@ -118,7 +118,6 @@
 .heading {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     padding: 0px 16px;
     gap: 8px;
 
@@ -131,7 +130,6 @@
     font-size: 12px;
     line-height: 18px;
 
-    display: flex;
     align-items: center;
     letter-spacing: 0.15px;
 

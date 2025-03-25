@@ -1,6 +1,5 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import MenuColumn from "./components/chat/MenuColumn";
+import MenuColumn from "@/components/chat/MenuColumn";
 import { menu } from "@/lib/menu";
 
 export default function Home() {

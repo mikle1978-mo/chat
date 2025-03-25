@@ -1,8 +1,8 @@
 import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import TopBar from "./components/layout/TopBar";
-import MessageInput from "./components/layout/MessageInput";
-import SideBar from "./components/layout/SideBar";
+import TopBar from "@/components/layout/TopBar";
+import MessageInput from "@/components/layout/MessageInput";
+import SideBar from "@/components/layout/SideBar";
 
 const jakartaSans = Plus_Jakarta_Sans({
     variable: "--font-jakarta-sans",
