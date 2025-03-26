@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
                     <div className='content'>
                         <TopBar />
                         {children}
-                        <MessageInput />
                     </div>
                 </div>
             </body>

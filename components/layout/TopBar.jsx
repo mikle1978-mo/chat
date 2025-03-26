@@ -7,11 +7,17 @@ import ChatIcon from "@/public/images/icons/chat.svg";
 import FolderIcon from "@/public/images/icons/folder.svg";
 import MyModal from "@/components/UI/Modal";
 import Share from "./Share";
+import Link from "next/link";
 
 const tabs = [
-    { id: 1, name: "Artificium", icon: ArtificiumIcon },
-    { id: 2, name: "Chat", icon: ChatIcon },
-    { id: 3, name: "Library", icon: FolderIcon },
+    {
+        id: 1,
+        name: "Artificium",
+        icon: ArtificiumIcon,
+        href: "/artificium",
+    },
+    { id: 2, name: "Chat", icon: ChatIcon, href: "/chat" },
+    { id: 3, name: "Library", icon: FolderIcon, href: "/library" },
 ];
 
 export default function TopBar() {
@@ -72,15 +78,16 @@ export default function TopBar() {
             <div className={styles.navigation}>
                 <ul className={styles.tabs}>
                     {tabs.map((tab) => (
-                        <li
-                            key={tab.id}
-                            className={`${styles.tab} ${
-                                activeTab === tab.id ? styles.active : ""
-                            }`}
-                            onClick={() => setActiveTab(tab.id)}
-                        >
-                            <tab.icon className={styles.icon} />
-                            <span>{tab.name}</span>
+                        <li key={tab.id} onClick={() => setActiveTab(tab.id)}>
+                            <Link
+                                href={tab.href}
+                                className={`${styles.tab} ${
+                                    activeTab === tab.id ? styles.active : ""
+                                }`}
+                            >
+                                <tab.icon className={styles.icon} />
+                                <span>{tab.name}</span>
+                            </Link>
                         </li>
                     ))}
                 </ul>
