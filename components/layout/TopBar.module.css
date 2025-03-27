@@ -4,7 +4,7 @@
     align-items: flex-start;
     padding: 0px;
 
-    width: 1092px;
+    width: 100%;
     height: 184px;
 
     background: var(--primary);
@@ -26,7 +26,7 @@
     padding: 24px;
     gap: 8px;
 
-    width: 1092px;
+    width: 100%;
     height: 104px;
 
     border-bottom: 1px solid var(--border);
@@ -86,7 +86,6 @@
     padding: 0px;
     gap: 24px;
 
-    width: 326px;
     height: 40px;
     flex: none;
     order: 1;
@@ -228,7 +227,7 @@
     padding: 24px;
     gap: 24px;
 
-    width: 1092px;
+    width: 100%;
     height: 80px;
 
     flex: none;

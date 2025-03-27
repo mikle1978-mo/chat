@@ -1,11 +1,10 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 96px auto 1fr 96px;
     align-items: flex-start;
     padding: 0px;
     border-radius: 20px;
     width: 312px;
-    height: 1000px;
     flex: none;
     background-color: var(--primary);
     order: 0;
@@ -120,19 +119,13 @@
     flex-direction: row;
     padding: 0px 16px;
     gap: 8px;
-
     width: 296px;
     height: 18px;
-
-    font-family: "Plus Jakarta Sans";
-    font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
-
     align-items: center;
     letter-spacing: 0.15px;
-
     text-transform: uppercase;
     color: var(--neutral);
 }
@@ -143,9 +136,7 @@
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-
     width: 296px;
-    height: 104px;
 }
 
 .projects {
@@ -155,7 +146,7 @@
     padding: 24px 8px;
     gap: 24px;
     border-bottom: 1px solid var(--border);
-    height: 614px;
+    overflow: auto;
 }
 
 .footer {

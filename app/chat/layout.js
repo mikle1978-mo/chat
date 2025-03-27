@@ -26,9 +26,9 @@ export default function ChatLayout({ children }) {
                                 <img src='/images/icons/dots.svg' alt='icon' />
                             </div>
                         </div>
+                        <div className={styles.gradient_top}></div>
                     </div>
                     <div className={styles.chat}>
-                        <div className={styles.gradient_top}></div>
                         {messages.map((msg) => (
                             <ChatMessage key={msg.id} message={msg} />
                         ))}
