@@ -2,6 +2,7 @@
 
 import styles from "./TopBar.module.css";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import ArtificiumIcon from "@/public/images/icons/artificium.svg";
 import ChatIcon from "@/public/images/icons/chat.svg";
 import FolderIcon from "@/public/images/icons/folder.svg";
@@ -21,7 +22,8 @@ const tabs = [
 ];
 
 export default function TopBar() {
-    const [activeTab, setActiveTab] = useState(1);
+    const router = useRouter();
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
     return (
@@ -78,16 +80,17 @@ export default function TopBar() {
             <div className={styles.navigation}>
                 <ul className={styles.tabs}>
                     {tabs.map((tab) => (
-                        <li key={tab.id} onClick={() => setActiveTab(tab.id)}>
-                            <Link
-                                href={tab.href}
+                        <li key={tab.id} onClick={() => router.push(tab.href)}>
+                            <div
                                 className={`${styles.tab} ${
-                                    activeTab === tab.id ? styles.active : ""
+                                    pathname === tab.href
+                                        ? styles.activeTab
+                                        : ""
                                 }`}
                             >
                                 <tab.icon className={styles.icon} />
                                 <span>{tab.name}</span>
-                            </Link>
+                            </div>
                         </li>
                     ))}
                 </ul>

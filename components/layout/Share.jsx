@@ -4,8 +4,6 @@ import { useState } from "react";
 export default function Share({ toggleOpen }) {
     const [openDropdown, setOpenDropdown] = useState(null);
     const toggleDropdown = () => setOpenDropdown(!openDropdown);
-    console.log(openDropdown);
-
     return (
         <div className={styles.share}>
             <div className={styles.heading}>

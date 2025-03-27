@@ -4,7 +4,7 @@ export default function NavigationItem({ children, active, ...props }) {
     return (
         <div
             className={`${styles.navigationitem} ${
-                active ? styles.active : ""
+                active ? styles.activeItem : ""
             }`}
         >
             <div className={styles.label} style={props.style}>

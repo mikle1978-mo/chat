@@ -275,15 +275,15 @@
     transition: all 0.3s ease;
 }
 
-.tab.active span {
+.tab.activeTab span {
     color: var(--foreground);
 }
 
-.tab.active svg {
+.tab.activeTab svg {
     color: var(--accent);
 }
 
-.tab.active::after {
+.tab.activeTab::after {
     position: absolute;
     content: "";
     bottom: -30px;
