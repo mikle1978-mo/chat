@@ -1,5 +1,4 @@
 .main {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,6 +42,10 @@
     order: 1;
     align-self: stretch;
     flex-grow: 1;
+}
+
+.pageContainer_overlay {
+    display: none;
 }
 
 .middle {
@@ -281,6 +284,28 @@
     align-self: stretch;
     flex-grow: 0;
 }
+.members_list::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+.members_list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.members_list::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 3px;
+}
+
+.members_list::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.7);
+}
+
+.members_list {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
 
 .member {
     position: relative;
@@ -358,7 +383,7 @@
 
 .name {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
 
@@ -431,4 +456,43 @@
 }
 .members_button.activeBtn {
     background: var(--secondary-4);
+}
+
+@media (max-width: 1200px) {
+    .pageContainer {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .pageContainer_overlay {
+        position: fixed;
+        display: none;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(6, 7, 8, 0.64);
+        backdrop-filter: blur(4px);
+    }
+    .members_wrapper {
+        position: absolute;
+        right: -366px;
+        top: 24px;
+        height: calc(100% - 48px);
+        width: 336px;
+        z-index: 5;
+        background-color: var(--background);
+        padding: 12px;
+        transition: right 0.3s ease-in-out;
+        will-change: right;
+    }
+    .members_wrapper.openMembers_wrapper {
+        right: 0;
+    }
+    .pageContainer_overlay.openMembers_wrapper {
+        display: block;
+    }
+    .members {
+        padding: 0px;
+    }
 }

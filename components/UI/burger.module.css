@@ -1,0 +1,81 @@
+/* Burger */
+
+.icon {
+    height: 4px;
+    width: 30px;
+    top: 13px;
+    background-color: var(--gray);
+    border-radius: 20px;
+    position: absolute;
+    transition-duration: 0.3s;
+    z-index: 100;
+}
+.icon:before {
+    left: 0;
+    position: absolute;
+    top: -9px;
+    height: 4px;
+    width: 30px;
+    background-color: var(--gray);
+    content: "";
+    border-radius: 20px;
+    transition-duration: 0.3s;
+}
+.icon:after {
+    left: 0;
+    position: absolute;
+    top: 9px;
+    height: 4px;
+    width: 30px;
+    background-color: var(--gray);
+    content: "";
+    border-radius: 20px;
+    transition-duration: 0.3s;
+}
+
+.menu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition-duration: 1s;
+    display: none;
+    cursor: pointer;
+    justify-self: flex-end;
+    z-index: 4;
+    order: 1;
+}
+
+.burger .icon {
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+}
+.burger .icon:after {
+    transition: transform 0.3s, top 0.3s 0.3s;
+}
+.burger .icon:before {
+    transition: transform 0.3s, top 0.3s 0.3s;
+}
+
+.burger.open .icon {
+    transition-duration: 0.1s;
+    transition-delay: 0.3s;
+    background: transparent;
+}
+
+.burger.open .icon:before {
+    transition: top 0.3s, transform 0.3s 0.3s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+}
+
+.burger.open .icon:after {
+    transition: top 0.3s, transform 0.3s 0.3s;
+    top: 0px;
+    transform: rotateZ(45deg);
+}
+
+@media (max-width: 992px) {
+    .menu {
+        display: inline-block;
+    }
+}

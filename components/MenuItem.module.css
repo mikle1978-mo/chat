@@ -3,9 +3,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: clamp(8px, 1vw, 16px);
     gap: 8px;
-    width: 199px;
+    width: 100%;
     height: 52px;
 
     background: linear-gradient(
@@ -19,11 +19,18 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+    flex-shrink: 1;
     text-wrap: nowrap;
 
     font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: clamp(12px, 1vw, 14px);
     line-height: 20px;
     letter-spacing: 0.15px;
+}
+
+@media (max-width: 1200px) {
+    .item {
+        text-wrap: wrap;
+    }
 }

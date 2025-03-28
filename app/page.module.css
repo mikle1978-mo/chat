@@ -3,9 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 64px;
-    width: 1092px;
+    padding: 0px 12px;
+    gap: clamp(24px, 3rem, 64px);
+    width: 100%;
+    max-width: 1092px;
     height: 100%;
     max-height: 100%;
     overflow: hidden;
@@ -22,29 +23,33 @@
     justify-content: center;
     padding: 0px;
     gap: 16px;
-    width: 709px;
-    height: 76px;
+    width: 100%;
+    max-width: 709px;
+    min-height: 76px;
     flex: none;
     order: 0;
     flex-grow: 0;
+    flex-shrink: 1;
 }
 .title h1 {
     width: 317px;
     height: 36px;
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: clamp(16px, 2vw, 28px);
     line-height: 36px;
+    text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--foreground);
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 .title span {
-    width: 709px;
-    height: 24px;
+    width: 100%;
+    min-height: 24px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -57,17 +62,19 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+    flex-shrink: 1;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px 52px;
-    gap: 64px;
-    width: 1092px;
-    height: 356px;
+    justify-content: space-between;
 
+    gap: 12px;
+    width: 100%;
+    max-width: 1092px;
+    height: 356px;
     flex: none;
     order: 1;
     align-self: stretch;

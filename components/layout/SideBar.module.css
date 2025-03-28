@@ -10,7 +10,12 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+    transition: all 5s ease-in;
 }
+.sidebar_overlay {
+    display: none;
+}
+
 .workspace {
     display: flex;
     flex-direction: row;
@@ -76,7 +81,7 @@
     order: 1;
     flex-grow: 0;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -121,7 +126,7 @@
     gap: 8px;
     width: 296px;
     height: 18px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     align-items: center;
@@ -187,4 +192,38 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        display: grid;
+        position: absolute;
+        left: -366px;
+        top: 24px;
+        height: calc(100% - 48px);
+        width: 336px;
+        z-index: 4;
+        background-color: var(--background);
+        padding: 12px;
+        transition: left 0.3s ease-in-out;
+        will-change: left;
+    }
+    .sidebar_overlay {
+        position: fixed;
+        display: none;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(6, 7, 8, 0.64);
+        backdrop-filter: blur(4px);
+    }
+    .sidebar_overlay.open_sidebar {
+        display: block;
+    }
+
+    .sidebar.open_sidebar {
+        left: 0;
+    }
 }

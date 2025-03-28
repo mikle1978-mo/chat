@@ -4,13 +4,13 @@
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
-
-    width: 199px;
-    height: 356px;
+    width: 100%;
+    max-width: 199px;
 
     flex: none;
     order: 3;
     flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .heading {
@@ -20,10 +20,8 @@
     align-items: center;
     padding: 0px;
     gap: 16px;
-
-    width: 199px;
+    width: 100%;
     height: 92px;
-
     flex: none;
     order: 0;
     align-self: stretch;
@@ -31,8 +29,8 @@
 }
 .heading h2 {
     font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: clamp(12px, 1.25vw, 18px);
     line-height: 28px;
 
     display: flex;
@@ -56,10 +54,8 @@
     align-items: center;
     padding: 14px 16px;
     gap: 16px;
-
     width: 48px;
     height: 48px;
-
     background: linear-gradient(
         117.58deg,
         rgba(215, 237, 237, 0.16) -47.79%,
@@ -79,12 +75,10 @@
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-
-    width: 199px;
-    height: 232px;
-
+    width: 100%;
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
+    flex-shrink: 1;
 }

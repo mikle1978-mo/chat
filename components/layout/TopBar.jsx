@@ -8,7 +8,7 @@ import ChatIcon from "@/public/images/icons/chat.svg";
 import FolderIcon from "@/public/images/icons/folder.svg";
 import MyModal from "@/components/UI/Modal";
 import Share from "./Share";
-import Link from "next/link";
+import Burger from "../UI/burger";
 
 const tabs = [
     {
@@ -21,15 +21,16 @@ const tabs = [
     { id: 3, name: "Library", icon: FolderIcon, href: "/library" },
 ];
 
-export default function TopBar() {
+export default function TopBar({ isNavOpen, setIsNavOpen }) {
     const router = useRouter();
     const pathname = usePathname();
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleOpen = () => setIsOpen(!isOpen);
+    const [isOpenShare, setIsOpenShare] = useState(false);
+    const toggleOpenShare = () => setIsOpenShare(!isOpenShare);
+    const toggleNav = () => setIsNavOpen(!isNavOpen);
     return (
         <div className={styles.topbar}>
-            <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
-                <Share toggleOpen={toggleOpen} />
+            <MyModal isOpen={isOpenShare} toggleOpen={toggleOpenShare}>
+                <Share toggleOpen={toggleOpenShare} />
             </MyModal>
             <div className={styles.heading}>
                 <div className={styles.project}>
@@ -66,7 +67,7 @@ export default function TopBar() {
                         </div>
                         <div className={styles.count}>+4</div>
                     </div>
-                    <div className={styles.actions} onClick={toggleOpen}>
+                    <div className={styles.actions} onClick={toggleOpenShare}>
                         <div className={styles.share}>
                             <img src='/images/icons/share.svg' alt='icon' />
                             <span>Share</span>
@@ -75,6 +76,7 @@ export default function TopBar() {
                     <div className={styles.edit}>
                         <img src='/images/icons/edit.svg' alt='icon' />
                     </div>
+                    <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
                 </div>
             </div>
             <div className={styles.navigation}>

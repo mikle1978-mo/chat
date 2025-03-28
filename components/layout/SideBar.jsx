@@ -1,9 +1,19 @@
 import NavigationItem from "../UI/NavigationItem";
 import styles from "./SideBar.module.css";
 
-export default function SideBar() {
+export default function SideBar({ isNavOpen, setIsNavOpen, handleClick }) {
     return (
-        <aside className={styles.sidebar}>
+        <aside
+            className={` ${styles.sidebar} ${
+                isNavOpen ? styles.open_sidebar : ""
+            }`}
+        >
+            <div
+                className={` ${styles.sidebar_overlay} ${
+                    isNavOpen ? styles.open_sidebar : ""
+                }`}
+                onClick={handleClick}
+            ></div>
             <div className={styles.workspace}>
                 <div className={styles.user}>
                     <div className={styles.avatar}>
