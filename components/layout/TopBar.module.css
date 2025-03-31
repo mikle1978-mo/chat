@@ -95,7 +95,7 @@
     margin-left: auto;
 }
 
-.users {
+.avatars {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -239,8 +239,6 @@
     align-items: center;
     padding: 0px;
     gap: 24px;
-
-    width: 341px;
     height: 100%;
 
     flex: none;
@@ -298,6 +296,11 @@
         border-radius: 10px;
     }
     .share span {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .avatars {
         display: none;
     }
 }

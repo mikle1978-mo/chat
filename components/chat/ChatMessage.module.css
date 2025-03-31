@@ -133,8 +133,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.15px;
     color: var(--gray);
     flex: none;
@@ -146,16 +144,15 @@
 .actions {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     padding: 0px;
     gap: 12px;
-
-    width: 247px;
     height: 32px;
 
     flex: none;
     order: 1;
-    flex-grow: 0;
+    flex-grow: 1;
 }
 
 .actionContainer {

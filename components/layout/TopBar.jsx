@@ -38,7 +38,7 @@ export default function TopBar({ isNavOpen, setIsNavOpen }) {
                     <span>Marketing Campaign for a new TV series Launch</span>
                 </div>
                 <div className={styles.options}>
-                    <div className={styles.users}>
+                    <div className={styles.avatars}>
                         <div className={styles.avatar}>
                             <img
                                 src='/images/avatars/Avatar3.webp'

@@ -475,6 +475,7 @@
         backdrop-filter: blur(4px);
     }
     .members_wrapper {
+        display: grid;
         position: absolute;
         right: -366px;
         top: 24px;
