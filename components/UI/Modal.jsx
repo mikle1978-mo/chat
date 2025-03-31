@@ -1,4 +1,4 @@
-import styles from "./modal.module.css";
+import styles from "./Modal.module.css";
 
 export default function MyModal({ isOpen, toggleOpen, children }) {
     const handleModalClick = (e) => {
