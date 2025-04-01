@@ -34,3 +34,14 @@
         text-wrap: wrap;
     }
 }
+@media (max-width: 768px) {
+    .item {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .item {
+        flex-shrink: 1;
+    }
+}

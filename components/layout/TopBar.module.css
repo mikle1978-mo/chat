@@ -84,15 +84,11 @@
     align-items: center;
     padding: 0px;
     gap: 24px;
-
+    margin-left: auto;
     height: 40px;
     flex: none;
     order: 1;
     flex-grow: 0;
-}
-
-.options {
-    margin-left: auto;
 }
 
 .avatars {
@@ -262,7 +258,6 @@
     padding: 0px 8px;
     gap: 12px;
     isolation: isolate;
-    width: 115px;
     color: var(--gray);
     cursor: pointer;
 }
@@ -302,5 +297,178 @@
 @media (max-width: 768px) {
     .avatars {
         display: none;
+    }
+    .topbar {
+        height: 160px;
+    }
+    .heading {
+        padding: 12px;
+
+        height: 80px;
+    }
+    .options {
+        gap: 12px;
+    }
+    .actions {
+        align-items: center;
+    }
+
+    .share {
+        width: 32px;
+        height: 32px;
+    }
+
+    .edit {
+        width: 32px;
+        height: 32px;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+        height: 56px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin-right: auto;
+    }
+
+    .project h1 {
+        font-weight: 700;
+        font-size: clamp(14px, 2vw, 20px);
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: var(--foreground);
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .project span {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .navigation {
+        padding: 12px;
+        gap: 12px;
+
+        width: 100%;
+        height: 80px;
+    }
+    .tabs {
+        gap: 12px;
+    }
+}
+@media (max-width: 576px) {
+    .avatars {
+        display: none;
+    }
+    .topbar {
+        height: 160px;
+    }
+    .heading {
+        padding: 10px;
+
+        height: 80px;
+    }
+    .options {
+        gap: 10px;
+    }
+    .actions {
+        align-items: center;
+    }
+
+    .share {
+        width: 30px;
+        height: 30px;
+    }
+
+    .edit {
+        width: 30px;
+        height: 30px;
+    }
+
+    .project {
+        height: auto;
+    }
+
+    .project h1 {
+        font-weight: 700;
+        font-size: clamp(14px, 2vw, 20px);
+        line-height: 28px;
+    }
+    .project span {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .navigation {
+        padding: 10px;
+        gap: 10px;
+
+        width: 100%;
+        height: 80px;
+    }
+    .tabs {
+        gap: 10px;
+    }
+}
+@media (max-width: 414px) {
+    .avatars {
+        display: none;
+    }
+    .topbar {
+        height: 160px;
+    }
+    .heading {
+        padding: 8px;
+    }
+    .options {
+        gap: 8px;
+    }
+    .actions {
+        align-items: center;
+    }
+
+    .share {
+        width: 30px;
+        height: 30px;
+    }
+
+    .edit {
+        width: 30px;
+        height: 30px;
+    }
+
+    .project {
+        height: auto;
+    }
+
+    .project h1 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .project span {
+        font-size: 11px;
+        line-height: 11px;
+    }
+
+    .navigation {
+        padding: 8px;
+        gap: 8px;
+    }
+    .tabs {
+        font-size: 12px;
+        gap: 8px;
+    }
+    .tab {
+        gap: 8px;
     }
 }

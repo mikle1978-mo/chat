@@ -82,3 +82,15 @@
     flex-grow: 0;
     flex-shrink: 1;
 }
+
+@media (max-width: 768px) {
+    .column {
+        gap: 24px;
+    }
+
+    .heading,
+    .heading h2,
+    .list {
+        flex-shrink: 1;
+    }
+}
