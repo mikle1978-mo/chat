@@ -25,6 +25,7 @@
     --height-gap-medium: clamp(8px, 2vh, 18px);
     --height-gap-small: clamp(8px, 1vh, 16px);
 
+    --fz-h1: clamp(14px, 2vw, 28px);
     --fz-h2: clamp(13px, 1.2vw, 18px);
     --fz-text: clamp(12px, 1vw, 16px);
 }
@@ -106,5 +107,6 @@ a {
 @media (max-width: 768px) {
     .content {
         grid-template-rows: auto 1fr;
+        gap: var(--height-gap-small) var(--width-gap-small);
     }
 }

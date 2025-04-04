@@ -34,7 +34,7 @@ export default function TopBar({ isNavOpen, setIsNavOpen }) {
             </MyModal>
             <div className={styles.heading}>
                 <div className={styles.project}>
-                    <h1>Orbital Oddysey</h1>{" "}
+                    <h2>Orbital Oddysey</h2>{" "}
                     <span>Marketing Campaign for a new TV series Launch</span>
                 </div>
                 <div className={styles.options}>

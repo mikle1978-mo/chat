@@ -32,7 +32,7 @@
 }
 .title h1 {
     font-weight: 700;
-    font-size: clamp(16px, 2vw, 28px);
+    font-size: var(--fz-h1);
     text-align: center;
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@
 @media (max-width: 576px) {
     .main {
         justify-content: flex-start;
-        padding: 0px 8px;
+        padding: 0;
     }
     .menu {
         display: grid;

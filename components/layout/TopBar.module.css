@@ -51,9 +51,9 @@
     margin-right: auto;
 }
 
-.project h1 {
+.project h2 {
     font-weight: 700;
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: var(--fz-h2);
     display: flex;
     align-items: center;
     text-align: center;
@@ -294,6 +294,7 @@
     }
     .heading {
         padding: 12px;
+        height: auto;
     }
     .options {
         gap: 12px;
@@ -323,17 +324,6 @@
         margin-right: auto;
     }
 
-    .project h1 {
-        font-weight: 700;
-        font-size: clamp(14px, 2vw, 20px);
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: var(--foreground);
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-    }
     .project span {
         font-size: 12px;
     }
@@ -342,6 +332,7 @@
         padding: 12px;
         gap: 12px;
         width: 100%;
+        height: auto;
     }
     .tabs {
         gap: 12px;
@@ -353,7 +344,7 @@
     }
 
     .heading {
-        padding: 10px;
+        padding: 8px;
     }
     .options {
         gap: 10px;
@@ -376,18 +367,14 @@
         height: auto;
     }
 
-    .project h1 {
-        font-weight: 700;
-        font-size: clamp(14px, 2vw, 20px);
-    }
     .project span {
         font-size: 12px;
     }
 
     .navigation {
-        padding: 10px;
-        gap: 10px;
+        padding: 8px;
         width: 100%;
+        height: auto;
     }
     .tabs {
         gap: 10px;
@@ -398,9 +385,6 @@
         display: none;
     }
 
-    .heading {
-        padding: 8px;
-    }
     .options {
         gap: 8px;
     }
@@ -422,14 +406,6 @@
         height: auto;
     }
 
-    .project h1 {
-        font-weight: 700;
-    }
-
-    .navigation {
-        padding: 8px;
-        gap: 8px;
-    }
     .tabs {
         font-size: 12px;
         gap: 8px;
