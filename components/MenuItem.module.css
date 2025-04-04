@@ -38,5 +38,6 @@
 @media (max-width: 576px) {
     .item {
         flex-shrink: 1;
+        padding: var(--height-gap-smaller) var(--width-gap-smaller);
     }
 }

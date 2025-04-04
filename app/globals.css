@@ -21,9 +21,12 @@
     --width-gap-large: clamp(8px, 2vw, 24px);
     --width-gap-medium: clamp(8px, 2vw, 18px);
     --width-gap-small: clamp(8px, 1vw, 16px);
+    --width-gap-smaller: clamp(5px, 0.5vw, 8px);
+
     --height-gap-large: clamp(8px, 2vh, 24px);
     --height-gap-medium: clamp(8px, 2vh, 18px);
     --height-gap-small: clamp(8px, 1vh, 16px);
+    --height-gap-smaller: clamp(5px, 0.5vh, 8px);
 
     --fz-h1: clamp(14px, 2vw, 28px);
     --fz-h2: clamp(13px, 1.2vw, 18px);

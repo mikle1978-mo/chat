@@ -271,7 +271,7 @@
 .tab.activeTab::after {
     position: absolute;
     content: "";
-    bottom: -30px;
+    bottom: -8px;
     left: 0;
     width: 100%;
     height: 3px;
@@ -339,12 +339,15 @@
     }
 }
 @media (max-width: 576px) {
+    .topbar {
+        gap: 8px;
+    }
     .avatars {
         display: none;
     }
 
     .heading {
-        padding: 8px;
+        padding: 0;
     }
     .options {
         gap: 10px;
@@ -372,7 +375,7 @@
     }
 
     .navigation {
-        padding: 8px;
+        padding: 0;
         width: 100%;
         height: auto;
     }
