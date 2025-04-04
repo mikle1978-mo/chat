@@ -1,6 +1,6 @@
 .sidebar {
     display: grid;
-    grid-template-rows: 96px auto 1fr 96px;
+    grid-template-rows: 12.5% auto 1fr 12.5%;
     align-items: flex-start;
     padding: 0px;
     border-radius: 20px;
@@ -21,10 +21,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: var(--height-gap-large);
     gap: 8px;
     width: 312px;
-    height: 96px;
+
     border-bottom: 1px solid var(--border);
     flex: none;
     order: 0;
@@ -80,22 +80,19 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    font-style: normal;
+
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+  
 }
 
 .members {
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
+  
     color: var(--accent);
     flex: none;
     order: 1;
@@ -113,9 +110,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px 8px;
-    gap: 24px;
-    height: 194px;
+    padding: var(--height-gap-large) 8px;
+    gap: var(--height-gap-large);
     border-bottom: 1px solid var(--border);
 }
 
@@ -128,9 +124,8 @@
     height: 18px;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
     align-items: center;
-    letter-spacing: 0.15px;
+  
     text-transform: uppercase;
     color: var(--neutral);
 }
@@ -148,38 +143,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px 8px;
-    gap: 24px;
+    padding: var(--height-gap-large) 8px;
+    gap: var(--height-gap-large);
     border-bottom: 1px solid var(--border);
     overflow: auto;
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 24px;
-
     width: 312px;
-    height: 96px;
-
-    flex: none;
-    order: 3;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-.footer_wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    gap: var(--height-gap-large);
+    padding: var(--height-gap-large);
     gap: 16px;
-
-    width: 296px;
-    height: 80px;
 
     background: linear-gradient(
         117.58deg,

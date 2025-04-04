@@ -57,8 +57,7 @@
 .day {
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.15px;
+
     color: var(--gray);
 }
 
@@ -95,15 +94,12 @@
 }
 
 .name {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
 
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
 
     color: var(--foreground);
 
@@ -112,14 +108,12 @@
     flex-grow: 0;
 }
 .time {
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
 
     color: var(--neutral);
 
@@ -129,11 +123,9 @@
 }
 
 .text {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+
     color: var(--gray);
     flex: none;
     order: 1;
@@ -168,13 +160,13 @@
     order: 0;
     flex-grow: 0;
     border: none;
-    font-style: normal;
+
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     text-wrap: nowrap;
     color: var(--gray);
 }
@@ -191,13 +183,13 @@
     order: 0;
     flex-grow: 0;
     border: none;
-    font-style: normal;
+
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     text-wrap: nowrap;
     color: var(--gray);
 }
@@ -240,14 +232,14 @@
     border: none;
     border-radius: 12px;
     align-self: stretch;
-    font-style: normal;
+
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
+
     color: var(--foreground);
     flex: none;
     order: 0;
@@ -312,13 +304,12 @@
     z-index: 1;
 }
 .optionBtn h2 {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     color: var(--foreground);
 
     flex: none;
@@ -462,8 +453,6 @@
 
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.15px;
 
     color: var(--neutral);
 }
@@ -486,8 +475,7 @@
 
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.15px;
+
     color: var(--neutral);
 }
 

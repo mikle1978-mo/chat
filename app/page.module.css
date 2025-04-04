@@ -1,10 +1,10 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0px 12px;
-    gap: clamp(24px, 3rem, 64px);
+    gap: 8px;
     width: 100%;
     max-width: 1092px;
     height: 100%;
@@ -22,21 +22,17 @@
     align-items: center;
     justify-content: center;
     padding: 0px;
-    gap: 16px;
+    gap: var(--height-gap-small);
     width: 100%;
     max-width: 709px;
-    min-height: 76px;
     flex: none;
     order: 0;
     flex-grow: 0;
     flex-shrink: 1;
 }
 .title h1 {
-    height: 36px;
-    font-style: normal;
     font-weight: 700;
     font-size: clamp(16px, 2vw, 28px);
-    line-height: 36px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -49,14 +45,11 @@
 .title span {
     width: 100%;
     min-height: 24px;
-    font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: var(--fz-text);
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
     color: var(--gray);
     flex: none;
     order: 1;
@@ -69,7 +62,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
     width: 100%;
     max-width: 1092px;
     flex: none;
@@ -81,17 +74,8 @@
 @media (max-width: 768px) {
     .main {
         justify-content: flex-start;
-        gap: 24px;
-        padding: 24px 0;
     }
-    .menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: flex-start;
-        justify-content: space-between;
-        justify-items: center;
-        gap: 24px;
-    }
+
     .title span {
         height: auto;
     }
@@ -99,11 +83,13 @@
 @media (max-width: 576px) {
     .main {
         justify-content: flex-start;
-        gap: none;
-        padding: 12px 0;
+        padding: 0px 8px;
     }
     .menu {
-        column-gap: 0;
-        row-gap: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        justify-content: space-between;
+        justify-items: center;
     }
 }

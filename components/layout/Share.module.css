@@ -38,15 +38,13 @@
 .heading h2 {
     font-weight: 500;
     font-size: 24px;
-    line-height: 32px;
     color: var(--foregroun);
     margin-right: auto;
 }
 .heading p {
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+
     color: var(--neutral);
 }
 .title {
@@ -215,10 +213,10 @@
     height: 18px;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     text-wrap: nowrap;
     color: var(--gray);
 }
@@ -249,8 +247,7 @@
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+
     color: var(--accent);
 }
 
@@ -340,16 +337,14 @@
     flex-grow: 0;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+
     text-wrap: nowrap;
     color: var(--foregroun);
 }
 .user_name span:last-child {
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.15px;
+
     color: var(--accent);
 }
 
@@ -381,8 +376,6 @@
 .viewer {
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.15px;
 }
 .owner {
     color: var(--accent);
@@ -409,9 +402,6 @@
     text-wrap: nowrap;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-
-    letter-spacing: 0.15px;
 
     color: var(--neutral);
 }
@@ -452,8 +442,7 @@
 .placeholder {
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+
     color: var(--secondary-2);
     flex: none;
     order: 1;
@@ -474,8 +463,6 @@
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
 
     color: var(--accent);
 }
@@ -503,9 +490,6 @@
     flex-grow: 0;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
-
-    letter-spacing: 0.15px;
 
     color: var(--gray);
 }

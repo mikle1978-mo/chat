@@ -66,10 +66,10 @@
 
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     color: var(--gray);
 }
 
@@ -89,10 +89,10 @@
 
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     color: var(--gray);
 }
 
@@ -125,8 +125,6 @@ details[open] .members_heading::before {
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
 
     color: var(--foreground);
 }
@@ -243,12 +241,10 @@ details[open] .members_heading::before {
 .name {
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
-
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
+
     color: var(--gray);
 }
 

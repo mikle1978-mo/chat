@@ -3,11 +3,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(8px, 1vw, 16px);
+    padding: var(--height-gap-large);
     gap: 8px;
     width: 100%;
-    height: 52px;
-
     background: linear-gradient(
         117.58deg,
         rgba(215, 237, 237, 0.16) -47.79%,
@@ -21,12 +19,8 @@
     flex-grow: 0;
     flex-shrink: 1;
     text-wrap: nowrap;
-
-    font-style: normal;
     font-weight: 500;
-    font-size: clamp(12px, 1vw, 14px);
-    line-height: 20px;
-    letter-spacing: 0.15px;
+    font-size: var(--fz-text);
 }
 
 @media (max-width: 1200px) {
@@ -37,6 +31,7 @@
 @media (max-width: 768px) {
     .item {
         height: auto;
+        padding: var(--height-gap-small) var(--width-gap-small);
     }
 }
 

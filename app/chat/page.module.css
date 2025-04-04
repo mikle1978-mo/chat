@@ -95,7 +95,7 @@
 .projectName h2 {
     font-weight: 500;
     font-size: 20px;
-    line-height: 32px;
+
     color: var(--foreground);
 }
 .badge {
@@ -139,7 +139,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 8px 24px;
+    padding: 8px var(--height-gap-large);
     gap: 12px;
     width: 48px;
     height: 48px;
@@ -195,7 +195,7 @@
     display: grid;
     grid-template-rows: 1fr 48px;
     align-items: flex-start;
-    gap: 24px;
+    gap: var(--height-gap-large);
     isolation: isolate;
     width: 312px;
     height: 100%;
@@ -243,10 +243,10 @@
     z-index: 0;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.15px;
+
     color: var(--gray);
 }
 
@@ -382,15 +382,13 @@
 }
 
 .name {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
 
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
+
     color: var(--foreground);
     flex: none;
     order: 0;
@@ -400,14 +398,13 @@
 .text_blue,
 .text_orange,
 .text_red {
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.15px;
+
     flex: none;
     order: 1;
     flex-grow: 0;

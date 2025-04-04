@@ -2,12 +2,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 14px 16px;
-    gap: 16px;
+    padding: var(--height-gap-small) 14px;
+    gap: var(--height-gap-small);
 
     width: 296px;
-    height: 48px;
-
+    font-size: var(--fz-h2);
     border-radius: 8px;
 }
 .navigationitem.activeItem {
@@ -26,7 +25,6 @@
     align-items: center;
 
     width: 210px;
-    height: 20px;
 }
 
 .icons_wrapper {
@@ -37,7 +35,7 @@
 .badge {
     font-size: 14px;
     font-weight: 500;
-    line-height: 1;
+
     text-transform: uppercase;
     color: #9b9c9e;
     display: inline-flex;
@@ -47,7 +45,6 @@
     gap: 2px;
     padding: 4px 7px;
     width: 38px;
-    height: 26px;
     background: linear-gradient(
         117.58deg,
         rgba(215, 237, 237, 0.16) -47.79%,

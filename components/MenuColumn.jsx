@@ -5,7 +5,9 @@ export default function MenuColumn({ item }) {
     return (
         <div className={styles.column}>
             <div className={styles.heading}>
-                <img src={item.columnIcon} alt='icon' className={styles.icon} />
+                <div className={styles.icon}>
+                    <img src={item.columnIcon} alt='icon' />
+                </div>
                 <h2>{item.columnName}</h2>
             </div>
             <div className={styles.list}>
