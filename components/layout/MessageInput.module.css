@@ -2,12 +2,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: clamp(8px, 2vw, 24px);
-    gap: clamp(8px, 2vw, 24px);
-
+    padding: var(--height-gap-large);
+    gap: var(--height-gap-large);
     width: 100%;
-    height: 96px;
-
     background: var(--primary);
     border-radius: 20px;
 
@@ -39,6 +36,7 @@
     flex-grow: 1;
 }
 .input::placeholder {
+    font-size: var(--fz-text);
     color: #363a3d;
 }
 
@@ -47,8 +45,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 8px 24px;
-    gap: 12px;
+
     color: var(--neutral);
     width: 48px;
     height: 48px;
@@ -62,8 +59,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 8px 24px;
-    gap: 12px;
 
     width: 48px;
     height: 48px;
@@ -74,4 +69,28 @@
     flex: none;
     order: 3;
     flex-grow: 0;
+}
+
+@media (max-width: 768px) {
+    .messageinput {
+        padding: var(--height-gap-small);
+        gap: var(--height-gap-small);
+    }
+
+    .input {
+        height: 30px;
+    }
+    .input::placeholder {
+        font-size: calc(var(--fz-text) - 2px);
+        color: #363a3d;
+    }
+
+    .paperclip {
+        width: 30px;
+        height: 30px;
+    }
+    .paperplane {
+        width: 30px;
+        height: 30px;
+    }
 }

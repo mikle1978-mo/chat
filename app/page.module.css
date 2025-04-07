@@ -49,6 +49,7 @@
     font-size: var(--fz-text);
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: var(--gray);
     flex: none;
@@ -68,7 +69,7 @@
     flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 0;
+    flex-grow: 1;
 }
 
 @media (max-width: 768px) {

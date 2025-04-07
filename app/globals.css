@@ -18,17 +18,17 @@
     --accent: #b6f09c;
     --border: #131619;
 
-    --width-gap-large: clamp(8px, 2vw, 24px);
-    --width-gap-medium: clamp(8px, 2vw, 18px);
-    --width-gap-small: clamp(8px, 1vw, 16px);
-    --width-gap-smaller: clamp(5px, 0.5vw, 8px);
+    --width-gap-large: clamp(12px, 2vw, 24px);
+    --width-gap-medium: clamp(8px, 1.5vw, 18px);
+    --width-gap-small: clamp(6px, 1vw, 12px);
+    --width-gap-smaller: clamp(4px, 0.5vw, 8px);
 
-    --height-gap-large: clamp(8px, 2vh, 24px);
-    --height-gap-medium: clamp(8px, 2vh, 18px);
-    --height-gap-small: clamp(8px, 1vh, 16px);
-    --height-gap-smaller: clamp(5px, 0.5vh, 8px);
+    --height-gap-large: clamp(12px, 2dvh, 24px);
+    --height-gap-medium: clamp(8px, 1.5dvh, 18px);
+    --height-gap-small: clamp(6px, 1dvh, 12px);
+    --height-gap-smaller: clamp(4px, 0.5dvh, 8px);
 
-    --fz-h1: clamp(14px, 2vw, 28px);
+    --fz-h1: clamp(14px, 1.5vw, 28px);
     --fz-h2: clamp(13px, 1.2vw, 18px);
     --fz-text: clamp(12px, 1vw, 16px);
 }
@@ -50,6 +50,14 @@ body {
     font-style: normal;
     line-height: 1.4;
     letter-spacing: 0.15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: none;
+    -webkit-user-drag: none;
+    -ms-touch-action: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
 }
 
 * {
@@ -81,7 +89,7 @@ a {
     grid-template-rows: 25% 1fr;
     align-items: flex-start;
     padding: 0px;
-    gap: 12px;
+    gap: var(--height-gap-large);
     width: 100%;
     height: 100%;
     max-height: 100%;

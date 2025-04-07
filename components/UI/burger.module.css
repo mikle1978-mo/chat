@@ -1,9 +1,9 @@
 /* Burger */
 
 .icon {
-    height: 4px;
-    width: 30px;
-    top: 13px;
+    height: 2px;
+    width: 18px;
+    top: 8px;
     background-color: var(--gray);
     border-radius: 20px;
     position: absolute;
@@ -13,9 +13,9 @@
 .icon:before {
     left: 0;
     position: absolute;
-    top: -9px;
-    height: 4px;
-    width: 30px;
+    top: -6px;
+    height: 2px;
+    width: 18px;
     background-color: var(--gray);
     content: "";
     border-radius: 20px;
@@ -24,9 +24,9 @@
 .icon:after {
     left: 0;
     position: absolute;
-    top: 9px;
-    height: 4px;
-    width: 30px;
+    top: 6px;
+    height: 2px;
+    width: 18px;
     background-color: var(--gray);
     content: "";
     border-radius: 20px;
@@ -34,8 +34,8 @@
 }
 
 .menu {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     position: relative;
     transition-duration: 1s;
     display: none;

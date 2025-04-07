@@ -138,7 +138,12 @@ export default function ArtificiumMessage({ message }) {
                     <div className={styles.options}>
                         {options.map((option, index) => (
                             <button key={index} className={styles.optionBtn}>
-                                <img src={option.optionIcon} alt='optionIcon' />
+                                <div className={styles.optionBtn_top}>
+                                    <img
+                                        src={option.optionIcon}
+                                        alt='optionIcon'
+                                    />
+                                </div>
                                 <h2>{option.optionName}</h2>
                                 <div className={styles.option_shadow}></div>
                             </button>
