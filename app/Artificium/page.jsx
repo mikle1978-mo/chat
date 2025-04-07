@@ -3,7 +3,7 @@ import { messages } from "@/lib/chat";
 import ArtificiumMessage from "../../components/artificium/ArtificiumMessage";
 import MessageInput from "@/components/layout/MessageInput";
 
-export default function Home() {
+export default function Artificium() {
     return (
         <>
             <main className={styles.main}>
