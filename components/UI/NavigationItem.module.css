@@ -60,3 +60,41 @@
     font-family: "Inter";
     font-size: 10px;
 }
+
+@media (max-width: 768px) {
+    .navigationitem {
+        justify-content: space-between;
+        padding: var(--height-gap-smaller) var(--width-gap-small);
+        gap: var(--height-gap-small);
+        width: 100%;
+    }
+    .navigationitem.activeItem {
+        background: linear-gradient(
+            117.58deg,
+            rgba(215, 237, 237, 0.16) -47.79%,
+            rgba(204, 235, 235, 0) 100%
+        );
+    }
+
+    .label {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        gap: 16px;
+        align-items: center;
+        width: auto;
+    }
+
+    .icons_wrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .badge {
+        font-size: var(--fz-text);
+        font-weight: 400;
+        gap: 2px;
+        padding: var(--height-gap-smaller) var(--width-gap-small);
+        width: clamp(24px, 3vw, 38px);
+    }
+}

@@ -1,3 +1,4 @@
+import Avatar from "../Avatar";
 import NavigationItem from "../UI/NavigationItem";
 import styles from "./SideBar.module.css";
 
@@ -16,9 +17,10 @@ export default function SideBar({ isNavOpen, setIsNavOpen, handleClick }) {
             ></div>
             <div className={styles.workspace}>
                 <div className={styles.user}>
-                    <div className={styles.avatar}>
-                        <img src='/images/avatars/Avatar.webp' alt='avatar' />
-                    </div>
+                    <Avatar
+                        avatar={"/images/avatars/Avatar.webp"}
+                        online={true}
+                    />
                     <div className={styles.name}>
                         <span>Intellisys</span>
                         <span className={styles.members}>12 members</span>{" "}
@@ -82,10 +84,11 @@ export default function SideBar({ isNavOpen, setIsNavOpen, handleClick }) {
             </div>
             <div className={styles.footer}>
                 <div className={styles.user}>
-                    <div className={styles.avatar}>
-                        <img src='/images/avatars/Avatar2.webp' alt='avatar' />
-                        <div className={styles.status}></div>
-                    </div>
+                    <Avatar
+                        avatar={"/images/avatars/Avatar2.webp"}
+                        online={true}
+                    />
+
                     <div className={styles.name}>
                         <span>Ryan Lee</span>
                         <span className={styles.members}>Premium</span>

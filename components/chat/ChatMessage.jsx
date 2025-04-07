@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import HighlightedText from "@/helpers/highLightedText.jsx";
 import Loader from "../UX/Loader";
+import Avatar from "../Avatar";
 
 export default function ChatMessage({ message }) {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -53,10 +54,7 @@ export default function ChatMessage({ message }) {
     if (text === "loader") {
         return (
             <div className={styles.message}>
-                <div className={styles.avatar}>
-                    <Image src={avatar} alt='avatar' width={48} height={48} />
-                    {online && <div className={styles.online}></div>}
-                </div>
+                <Avatar avatar={avatar} online={online} />
                 <div className={styles.messageContent}>
                     <div className={styles.header}>
                         <div className={styles.nameContainer}>
@@ -134,16 +132,13 @@ export default function ChatMessage({ message }) {
 
     return (
         <div className={styles.message}>
-            <div className={styles.avatar}>
-                <Image src={avatar} alt='avatar' width={48} height={48} />
-                {online && <div className={styles.online}></div>}
-                {answers.length > 0 && (
-                    <div
-                        className={styles.answers_line}
-                        style={{ height: lineHeight }}
-                    ></div>
-                )}
-            </div>
+            <Avatar avatar={avatar} online={online} />
+            {/* {answers.length > 0 && (
+                <div
+                    className={styles.answers_line}
+                    style={{ height: lineHeight }}
+                ></div>
+            )} */}
             <div className={styles.messageContent}>
                 <div className={styles.header}>
                     <div className={styles.nameContainer}>
@@ -271,22 +266,15 @@ export default function ChatMessage({ message }) {
                                 key={index}
                                 className={styles.answersContainer}
                             >
-                                <div className={styles.avatar}>
-                                    <Image
-                                        src={answer?.avatar}
-                                        alt='avatar'
-                                        width={48}
-                                        height={48}
-                                    />
-                                    {answer?.online && (
-                                        <div className={styles.online}></div>
-                                    )}
-                                    <div
+                                <Avatar
+                                    avatar={answer?.avatar}
+                                    online={online}
+                                />
+                                {/* <div
                                         className={
                                             styles.answer_horisontal_line
                                         }
-                                    ></div>
-                                </div>
+                                    ></div> */}
                                 <div className={styles.messageContent}>
                                     <div className={styles.header}>
                                         <div className={styles.nameContainer}>

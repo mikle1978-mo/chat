@@ -6,8 +6,8 @@
     gap: var(--width-gap-large);
     width: 100%;
     max-width: 100%;
+    height: auto;
     min-height: 116px;
-    overflow: hidden;
     border: 1px solid var(--secondary-4);
     border-radius: 16px;
     flex: none;
@@ -15,31 +15,6 @@
     align-self: stretch;
     flex-grow: 0;
     z-index: 0;
-}
-
-.avatar {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-}
-.avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-}
-.online {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    right: -4px;
-    top: -4px;
-    background-color: var(--secondary);
-    border: 4px solid var(--border);
-    border-radius: 10px;
 }
 
 .messageContent {
@@ -50,7 +25,7 @@
     gap: 12px;
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
+    height: auto;
     flex: none;
     order: 0;
     align-self: stretch;
@@ -130,10 +105,9 @@
     justify-content: flex-start;
     padding: 0px;
     gap: 12px;
-    width: 100%;
+    width: auto;
     max-width: 100%;
-    overflow: hidden;
-    height: 32px;
+    height: auto;
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -147,7 +121,7 @@
     justify-content: center;
     padding: 8px 12px;
     gap: 6px;
-    height: 32px;
+    height: auto;
     background: var(--secondary-4);
     border-radius: 8px;
     flex: none;
@@ -163,6 +137,7 @@
 }
 
 .actionBtn {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -199,7 +174,7 @@
     width: 232px;
     height: 212px;
     left: 0;
-    top: 40px;
+    top: 110%;
     background: var(--primary);
     box-shadow: 0px 25px 50px -12px rgba(6, 7, 8, 0.16),
         0px 8px 10px -6px rgba(6, 7, 8, 0.06);
@@ -207,6 +182,11 @@
     flex: none;
     order: 6;
     flex-grow: 0;
+}
+
+.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
 }
 
 .subActionBtn {
@@ -483,19 +463,9 @@
 
 @media (max-width: 768px) {
     .message {
-        grid-template-columns: clamp(24px, 4vw, 32px) 1fr;
+        grid-template-columns: auto 1fr;
         padding: var(--height-gap-medium) var(--width-gap-medium);
         gap: var(--width-gap-medium);
-    }
-    .avatar {
-        width: clamp(24px, 4vw, 32px);
-        height: clamp(24px, 4vw, 32px);
-        flex-shrink: 1;
-    }
-    .online {
-        width: 10px;
-        height: 10px;
-        border: 3px solid var(--border);
     }
     .messageContent {
         gap: var(--height-gap-small);
@@ -543,6 +513,29 @@
         height: auto;
         font-weight: 400;
         font-size: var(--fz-text);
+    }
+    .dropdown {
+        padding: 4px;
+        gap: 4px;
+        position: absolute;
+        width: auto;
+        height: auto;
+    }
+    .subActionBtn {
+        justify-content: space-between;
+        padding: var(--height-gap-smaller) var(--width-gap-small);
+        gap: var(--width-gap-small);
+        width: auto;
+        height: auto;
+        font-weight: 400;
+        font-size: var(--fz-text);
+    }
+    .subActionBtn_left {
+        padding: 0px;
+        gap: 16px;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
     }
     .options {
         grid-template-columns: repeat(4, 1fr);

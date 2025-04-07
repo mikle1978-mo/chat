@@ -4,11 +4,13 @@ import styles from "./ArtificiumMessage.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import HighlightedText from "@/helpers/highLightedText.jsx";
-import Loader from "../UX/Loader";
+import Loader from "@/components/UX/Loader";
+import Avatar from "@/components/Avatar";
 
 export default function ArtificiumMessage({ message }) {
     const [openDropdown, setOpenDropdown] = useState(null);
     const toggleDropdown = (index) => {
+        console.log(openDropdown);
         setOpenDropdown(openDropdown === index ? null : index);
     };
     const {
@@ -38,10 +40,7 @@ export default function ArtificiumMessage({ message }) {
     if (text === "loader") {
         return (
             <div className={styles.message}>
-                <div className={styles.avatar}>
-                    <Image src={avatar} alt='avatar' width={48} height={48} />
-                    {online && <div className={styles.online}></div>}
-                </div>
+                <Avatar avatar={avatar} online={online} />
                 <div className={styles.messageContent}>
                     <div className={styles.header}>
                         <div className={styles.nameContainer}>
@@ -119,10 +118,7 @@ export default function ArtificiumMessage({ message }) {
 
     return (
         <div className={styles.message}>
-            <div className={styles.avatar}>
-                <Image src={avatar} alt='avatar' width={48} height={48} />
-                {online && <div className={styles.online}></div>}
-            </div>
+            <Avatar avatar={avatar} online={online} />
             <div className={styles.messageContent}>
                 <div className={styles.header}>
                     <div className={styles.nameContainer}>
