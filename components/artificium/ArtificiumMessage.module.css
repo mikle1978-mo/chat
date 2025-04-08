@@ -586,7 +586,7 @@
 }
 @media (max-width: 576px) {
     .message {
-        grid-template-columns: clamp(24px, 4vw, 32px) 1fr;
+        grid-template-columns: auto 1fr;
         padding: var(--height-gap-small) var(--width-gap-small);
         gap: var(--width-gap-small);
     }

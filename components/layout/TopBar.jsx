@@ -9,6 +9,8 @@ import FolderIcon from "@/public/images/icons/folder.svg";
 import MyModal from "@/components/UI/Modal";
 import Share from "./Share";
 import Burger from "../UI/burger";
+import Users from "../UX/Users";
+import { users } from "@/lib/users";
 
 const tabs = [
     {
@@ -38,35 +40,7 @@ export default function TopBar({ isNavOpen, setIsNavOpen }) {
                     <span>Marketing Campaign for a new TV series Launch</span>
                 </div>
                 <div className={styles.options}>
-                    <div className={styles.avatars}>
-                        <div className={styles.avatar}>
-                            <img
-                                src='/images/avatars/Avatar3.webp'
-                                alt='avatar'
-                            />
-                        </div>
-                        <div className={styles.avatar}>
-                            <img
-                                src='/images/avatars/Avatar4.webp'
-                                alt='avatar'
-                            />
-                            <div className={styles.status}></div>
-                        </div>
-                        <div className={styles.avatar}>
-                            <img
-                                src='/images/avatars/Avatar5.webp'
-                                alt='avatar'
-                            />
-                            <div className={styles.status}></div>
-                        </div>
-                        <div className={styles.avatar}>
-                            <img
-                                src='/images/avatars/Avatar6.webp'
-                                alt='avatar'
-                            />
-                        </div>
-                        <div className={styles.count}>+4</div>
-                    </div>
+                    <Users users={users} />
                     <div className={styles.actions} onClick={toggleOpenShare}>
                         <div className={styles.share}>
                             <img src='/images/icons/share.svg' alt='icon' />

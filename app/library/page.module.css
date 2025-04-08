@@ -1,70 +1,149 @@
 .main {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 64px;
+    gap: 16px;
+    padding: 20px;
     width: 100%;
-    height: 696px;
+    height: 100%;
+    overflow: hidden;
     flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 1;
-}
-
-.gradient_top {
-    position: absolute;
-    width: 100%;
-    height: 112px;
-    left: 0px;
-    top: 0px;
-    background: linear-gradient(0deg, rgba(19, 22, 25, 0) 0%, #131619 100%);
-    flex: none;
-    order: 5;
-    flex-grow: 0;
-    z-index: 2;
 }
 
 .pageContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-rows: auto 1fr;
     justify-content: flex-start;
     align-items: center;
     padding: 0px;
     gap: 16px;
     width: 100%;
-    height: 100%;
     overflow-y: auto;
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 1;
+    flex-shrink: 1;
+}
+.library_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 100%;
+    overflow-y: auto;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
-.pageContainer::-webkit-scrollbar {
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 100%;
+    font-size: var(--fz-h2);
+    overflow-y: auto;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    flex-shrink: 1;
+    list-style: none;
+}
+
+.library_container::-webkit-scrollbar {
     width: 6px;
     height: 6px;
 }
 
-.pageContainer::-webkit-scrollbar-track {
+.library_container::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.pageContainer::-webkit-scrollbar-thumb {
+.library_container::-webkit-scrollbar-thumb {
     background: rgba(100, 100, 100, 0.5);
     border-radius: 3px;
 }
 
-.pageContainer::-webkit-scrollbar-thumb:hover {
+.library_container::-webkit-scrollbar-thumb:hover {
     background: rgba(100, 100, 100, 0.7);
 }
 
-.pageContainer {
+.library_container {
     scrollbar-width: thin;
     scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+.library_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    width: 40px;
+    background: var(--secondary-4);
+    border-radius: 10px;
+    flex: none;
+    order: 5;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        gap: var(--width-gap-medium);
+        padding: var(--height-gap-small) var(--width-gap-medium);
+    }
+
+    .pageContainer {
+        gap: var(--width-gap-medium);
+    }
+    .library_container {
+        gap: var(--width-gap-medium);
+    }
+
+    .nav {
+        gap: var(--width-gap-medium);
+    }
+    .library_btn {
+        padding: var(--height-gap-small) var(--width-gap-medium);
+        width: clamp(24px, 3vw, 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .pageContainer {
+        justify-content: unset;
+    }
+    .library_container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav li.active {
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent);
+    }
+
+    .nav li {
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .nav li:hover {
+        background: var(--secondary-4);
+    }
 }
