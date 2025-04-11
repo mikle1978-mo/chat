@@ -1,0 +1,101 @@
+.overlay,
+.modal {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+@keyframes overlay-in {
+    0% {
+        scale: 0 0.004;
+    }
+    33% {
+        scale: 1 0.04;
+    }
+    66%,
+    100% {
+        scale: 1 1;
+    }
+}
+
+.overlay {
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(6, 7, 8, 0.64);
+    backdrop-filter: blur(4px);
+}
+
+.overlay.open {
+    visibility: visible;
+    opacity: 1;
+    animation: overlay-in 1s both;
+}
+
+.modal {
+    z-index: 2;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    border-radius: 24px;
+    transform: translate(0, 0);
+    background-color: rgba(104, 96, 96, 0.432);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    isolation: isolate;
+
+    background: rgba(26, 29, 33, 0.96);
+
+    box-shadow: 0px 24px 64px -16px rgba(0, 0, 0, 0.24),
+        inset 16px 24px 64px -24px rgba(255, 255, 255, 0.04),
+        inset 0px 8px 12px rgba(255, 255, 255, 0.04);
+    border-radius: 24px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.overlay.open .modal {
+    opacity: 1;
+    visibility: visible;
+    animation: modal-in 1s;
+}
+
+@keyframes modal-in {
+    0%,
+    66% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 992px) {
+    .modal {
+        padding: var(--height-gap-medium);
+        gap: var(--height-gap-small);
+    }
+}
+@media (max-width: 768px) {
+    .modal {
+        width: 70vw;
+    }
+}
+@media (max-width: 576px) {
+    .modal {
+        width: 80vw;
+    }
+}

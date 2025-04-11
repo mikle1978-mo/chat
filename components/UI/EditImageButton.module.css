@@ -1,0 +1,33 @@
+.edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    gap: 12px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    top: 12px;
+    background: linear-gradient(
+        117.58deg,
+        rgba(215, 237, 237, 0.16) -47.79%,
+        rgba(204, 235, 235, 0) 100%
+    );
+    box-shadow: 0px 24px 24px -16px rgba(0, 0, 0, 0.12),
+        inset 16px 24px 64px -24px rgba(255, 255, 255, 0.08),
+        inset 0px 8px 12px rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+    .edit {
+        padding: var(--height-gap-small) var(--width-gap-small);
+        gap: var(--width-gap-small);
+        width: 32px;
+        height: 32px;
+        right: 6px;
+        top: 6px;
+    }
+}
