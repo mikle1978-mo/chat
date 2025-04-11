@@ -1,5 +1,6 @@
 import styles from "./Share.module.css";
 import { useState } from "react";
+import Avatar from "../Avatar";
 
 export default function Share({ toggleOpen }) {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -144,12 +145,11 @@ export default function Share({ toggleOpen }) {
             <div className={styles.list}>
                 <div className={styles.user}>
                     <div className={styles.label}>
-                        <div className={styles.user_avatar}>
-                            <img
-                                src='/images/avatars/Avatar2.webp'
-                                alt='avatar'
-                            />
-                        </div>
+                        <Avatar
+                            avatar={"/images/avatars/Avatar2.webp"}
+                            online={true}
+                        />
+
                         <div className={styles.user_name}>
                             <span>You</span>
                             <span>@ryan</span>
@@ -161,12 +161,10 @@ export default function Share({ toggleOpen }) {
                 </div>
                 <div className={styles.user}>
                     <div className={styles.label}>
-                        <div className={styles.user_avatar}>
-                            <img
-                                src='/images/avatars/MiaPark.png'
-                                alt='avatar'
-                            />
-                        </div>
+                        <Avatar
+                            avatar={"/images/avatars/MiaPark.png"}
+                            online={true}
+                        />
                         <div className={styles.user_name}>
                             <span>Mia Park</span>
                             <span>@cute-mia</span>
@@ -178,12 +176,11 @@ export default function Share({ toggleOpen }) {
                 </div>
                 <div className={styles.user}>
                     <div className={styles.label}>
-                        <div className={styles.user_avatar}>
-                            <img
-                                src='/images/avatars/IsabellaChen.png'
-                                alt='avatar'
-                            />
-                        </div>
+                        <Avatar
+                            avatar={"/images/avatars/IsabellaChen.png"}
+                            online={true}
+                        />
+
                         <div className={styles.user_name}>
                             <span>IsabellaChen</span>
                             <span>@issa</span>
@@ -195,12 +192,11 @@ export default function Share({ toggleOpen }) {
                 </div>
                 <div className={styles.user}>
                     <div className={styles.label}>
-                        <div className={styles.user_avatar}>
-                            <img
-                                src='/images/avatars/AndrewGarcia.png'
-                                alt='avatar'
-                            />
-                        </div>
+                        <Avatar
+                            avatar={"/images/avatars/AndrewGarcia.png"}
+                            online={true}
+                        />
+
                         <div className={styles.user_name}>
                             <span>Andrew Garcia</span>
                             <span>@garci28</span>
