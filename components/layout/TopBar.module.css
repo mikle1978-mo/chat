@@ -256,6 +256,9 @@
     }
 }
 @media (max-width: 576px) {
+    .hidden_on_mobile {
+        display: none;
+    }
     .topbar {
         gap: 8px;
     }

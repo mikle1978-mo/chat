@@ -60,7 +60,7 @@ export default function ImageEditorPage({ params }) {
                                 alt='icon'
                             />
                         </div>
-                        {image.alt}
+                        <span>{image.alt}</span>
                         <img src='/images/Badge3D.webp' alt='3d' />
                     </div>
                     <div className={styles.actions}>
@@ -69,7 +69,7 @@ export default function ImageEditorPage({ params }) {
                         </div>
 
                         <div onClick={handleSave} className={styles.export}>
-                            Export
+                            <span>Export</span>
                             <div className={styles.icon_wrapper}>
                                 <img
                                     src='/images/icons/download.svg'

@@ -73,48 +73,42 @@ export default function Share({ toggleOpen }) {
                         <div className={styles.input_dropdown}>
                             <div className={styles.dropdown_heading}>Users</div>
                             <div className={styles.dropdown_label}>
-                                <div className={styles.user_avatar}>
-                                    <img
-                                        src='/images/avatars/MarcusChen.png'
-                                        alt='avatar'
-                                    />
-                                </div>
+                                <Avatar
+                                    avatar={"/images/avatars/MarcusChen.png"}
+                                    online={true}
+                                />
+
                                 <div className={styles.user_name}>
                                     <span>Marcus Chen</span>
                                     <span>@marc</span>
                                 </div>
                             </div>
                             <div className={styles.dropdown_label}>
-                                <div className={styles.user_avatar}>
-                                    <img
-                                        src='/images/avatars/AvaGupta.png'
-                                        alt='avatar'
-                                    />
-                                </div>
+                                <Avatar
+                                    avatar={"/images/avatars/AvaGupta.png"}
+                                    online={true}
+                                />
                                 <div className={styles.user_name}>
                                     <span>Ava Gupta</span>
                                     <span>@avyavy</span>
                                 </div>
                             </div>
                             <div className={styles.dropdown_label}>
-                                <div className={styles.user_avatar}>
-                                    <img
-                                        src='/images/avatars/LucasOrtiz.png'
-                                        alt='avatar'
-                                    />
-                                </div>
+                                <Avatar
+                                    avatar={"/images/avatars/LucasOrtiz.png"}
+                                    online={true}
+                                />
                                 <div className={styles.user_name}>
                                     <span>Lucas Ortiz</span>
                                     <span>@luckyluc</span>
                                 </div>
                             </div>
                             <div className={styles.dropdown_label}>
-                                <div className={styles.user_avatar}>
-                                    <img
-                                        src='/images/avatars/MiaPark.png'
-                                        alt='avatar'
-                                    />
-                                </div>
+                                <Avatar
+                                    avatar={"/images/avatars/MiaPark.png"}
+                                    online={true}
+                                />
+
                                 <div className={styles.user_name}>
                                     <span>Mia Park</span>
                                     <span>@cute-mia</span>

@@ -40,7 +40,9 @@ export default function TopBar({ isNavOpen, setIsNavOpen }) {
                     <span>Marketing Campaign for a new TV series Launch</span>
                 </div>
                 <div className={styles.options}>
-                    <Users users={users} />
+                    <div className={styles.hidden_on_mobile}>
+                        <Users users={users} />
+                    </div>
                     <div className={styles.actions} onClick={toggleOpenShare}>
                         <div className={styles.share}>
                             <img src='/images/icons/share.svg' alt='icon' />

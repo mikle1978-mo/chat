@@ -685,6 +685,15 @@
     }
 }
 @media (max-width: 576px) {
+    .input {
+        padding: 0px;
+        gap: var(--width-gap-smaller);
+    }
+    .chip {
+        padding: var(--height-gap-smaller) var(--width-gap-smaller);
+        gap: var(--width-gap-small);
+    }
+
     .trail span {
         display: none;
     }
